@@ -16,7 +16,7 @@ jobs:
       - name: Build Docker Image
         run: docker build -t frontend-test frontend/.
       - name: Publish image to docker hub
-        run: docker push frontend-test/:mnist-app:latest 
+        run: docker push frontend-test:latest 
 
   deploy: 
     needs: build
