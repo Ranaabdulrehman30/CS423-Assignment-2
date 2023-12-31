@@ -14,9 +14,9 @@ jobs:
       - name: Login to Docker Hub
         run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASS }}
       - name: Build Docker Image
-        run: docker build -t mnist-app frontend/.
+        run: docker build -t front-end/mnist-app frontend/.
       - name: Publish image to Docker Hub
-        run: docker push ranaabdulrehman30/mnist-app:latest
+        run: docker push front-end/mnist-app:latest
 
   deploy: 
     needs: build
