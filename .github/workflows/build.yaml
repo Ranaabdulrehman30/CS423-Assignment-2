@@ -16,7 +16,7 @@ jobs:
       - name: Build Docker Image
         run: docker build -t mnist-app frontend/.
       - name: Publish image to Docker Hub
-        run: docker push mnist-app:latest
+        run: docker push mnist-app
 
   deploy: 
     needs: build
